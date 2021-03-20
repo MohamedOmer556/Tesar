@@ -170,8 +170,8 @@ barba.init({
         tl.fromTo(
           ".swipe",
           0.75,
-          { x: "-100%" },
-          { x: "0%", onComplete: done },
+          { skewX: "-90deg" },
+          { skewX: "0deg", onComplete: done },
           "-=0.5"
         );
       },
@@ -184,9 +184,9 @@ barba.init({
         tl.fromTo(
           ".swipe",
           1,
-          { x: "0%" },
+          { skewX: "0deg" },
 
-          { x: "100%", stagger: 0.2, onComplete: done }
+          { skewX: "90deg", stagger: 0.2, onComplete: done }
         );
         tl.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1 });
         tl.fromTo(

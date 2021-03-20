@@ -283,7 +283,7 @@ body {
   position: fixed;
   top: 0%;
   left: 0%;
-  transform: translateX(-100%);
+  transform: skewX(-90deg);
 }
 .swipe1 {
   background: rgb(126, 26, 64);
