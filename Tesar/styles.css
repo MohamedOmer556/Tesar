@@ -1,0 +1,700 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #17181a;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+#logo {
+  color: rgb(126, 26, 64);
+  font-family: "Abril Fatface";
+  text-decoration: none;
+  font-size: 3rem;
+}
+.nav-header {
+  min-height: 10vh;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0rem;
+  z-index: 2;
+  position: relative;
+}
+.line1,
+.line2 {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.3rem;
+  background: rgb(126, 26, 64);
+  pointer-events: none;
+}
+
+.slide {
+  min-height: 100vh;
+  margin: 0 auto 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: #17181a;
+  overflow: hidden;
+}
+
+.hero-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  flex-basis: 25rem;
+  padding-left: 5rem;
+  position: relative;
+}
+.hero-img {
+  position: relative;
+  flex: 1 1 25rem;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fashion-span {
+  color: rgb(255, 139, 93);
+}
+.mountain-span {
+  color: rgb(86, 124, 228);
+}
+
+.hike-span {
+  color: rgb(167, 110, 231);
+}
+.hero-desc h2 {
+  font-family: "Abril Fatface";
+  font-size: 3.5rem;
+}
+.hero-desc p {
+  padding: 3rem 0rem;
+  font-size: 1.3rem;
+  color: rgb(223, 223, 223);
+  line-height: 1.8rem;
+}
+.explore {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  color: white;
+  border: 1px solid white;
+  font-size: 1rem;
+  text-decoration: none;
+  align-self: flex-start;
+  cursor: pointer;
+}
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+.burger {
+  cursor: pointer;
+}
+.nav-links {
+  flex-basis: 30rem;
+  display: flex;
+  flex-direction: column;
+}
+.nav-links a {
+  margin: 3rem 0;
+  color: rgb(63, 41, 88);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+.contact {
+  flex-basis: 30rem;
+}
+.contact h2 {
+  font-size: 3rem;
+  padding: 2rem 0rem;
+  color: #282828;
+}
+.contact p {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+
+.reveal-img,
+.reveal-text {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: #17181a;
+  left: 0;
+  top: -15%;
+}
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  transition-property: background, transform;
+  transform-origin: 75% 75%;
+}
+.cursor.nav-active {
+  background: white;
+  transform: scale(3);
+}
+.cursor.explore-active {
+  background: white;
+  transform: scale(3);
+}
+.cursor-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 0.5rem;
+  transform: translate(-50%, -50%);
+}
+.title {
+  position: relative;
+  overflow: hidden;
+}
+.title-swipe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  mix-blend-mode: darken;
+  transform: translateY(100%);
+}
+.t-swipe1 {
+  background: rgb(86, 124, 228);
+}
+.t-swipe2 {
+  background: rgb(167, 110, 231);
+}
+.t-swipe3 {
+  background: rgb(255, 139, 93);
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+.hide {
+  overflow: hidden;
+}
+
+/* other pages */
+.detail-slide {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  color: aqua;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+.girl {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+
+.fashion-img {
+  width: 40%;
+}
+.fashion-text {
+  flex: 1;
+  flex-basis: 25rem;
+  position: relative;
+}
+.fashion-text h2 {
+  font-size: 4rem;
+  padding: 4rem 0rem;
+}
+.fashion-text p {
+  padding-right: 5rem;
+  margin-bottom: 10rem;
+  font-size: 1.2rem;
+}
+.fashion1 h2 {
+  color: rgb(255, 139, 93);
+}
+.fashion2 h2 {
+  color: rgb(167, 110, 231);
+}
+.fashion3 h2 {
+  color: rgb(86, 124, 228);
+}
+.fashion-nr {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  font-size: 15rem;
+  opacity: 50%;
+  color: aqua;
+}
+.span-nr1 {
+  color: rgb(255, 139, 93);
+}
+.span-nr2 {
+  color: rgb(167, 110, 231);
+}
+.span-nr3 {
+  color: rgb(86, 124, 228);
+}
+.swipe {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  transform: translateX(-100%);
+}
+.swipe1 {
+  background: rgb(126, 26, 64);
+
+  z-index: 5;
+}
+.swipe2 {
+  background: rgb(167, 110, 231);
+  z-index: 4;
+}
+.swipe3 {
+  background: rgb(107, 30, 143);
+  z-index: 3;
+}
+
+/* hike-page */
+.hike-slide {
+  min-height: 100vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.hike-text {
+  flex-basis: 25rem;
+  flex: 1;
+  text-align: left;
+  margin-left: 5rem;
+}
+.hike-img {
+  width: 40%;
+}
+.hike-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+.hike-text h2 {
+  font-size: 3.5rem;
+  padding: 3rem 0rem;
+}
+.hike-text p {
+  margin-bottom: 10rem;
+  font-size: 1.2rem;
+}
+.hike1 h2 {
+  color: rgb(44, 87, 116);
+}
+.hike2 h2 {
+  color: crimson;
+}
+.hike3 {
+  color: floralwhite;
+}
+.hike-nr {
+  position: absolute;
+  bottom: 7%;
+  left: 32%;
+  font-size: 15rem;
+  opacity: 50%;
+}
+.hike-nr1 {
+  color: rgb(44, 87, 116);
+}
+.hike-nr2 {
+  color: crimson;
+}
+.hike-nr3 {
+  color: floralwhite;
+}
+
+/* climbing */
+.climbing-slide {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  flex-wrap: wrap;
+  color: aqua;
+  position: relative;
+  overflow: hidden;
+}
+.climb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+
+.climbing-img {
+  width: 40%;
+}
+.climbing-text {
+  flex: 1;
+  flex-basis: 25rem;
+  position: relative;
+}
+.climbing-text h2 {
+  font-size: 4rem;
+  padding: 4rem 0rem;
+}
+.climbing-text p {
+  padding-right: 5rem;
+  margin-bottom: 10rem;
+  font-size: 1.2rem;
+}
+.climbing1 h2 {
+  color: floralwhite;
+}
+.climbing2 h2 {
+  color: rgb(126, 26, 64);
+}
+.climbing3 h2 {
+  color: rgb(39, 95, 86);
+}
+.climbing-nr {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  font-size: 15rem;
+  opacity: 50%;
+  color: aqua;
+}
+.climbing-nr1 {
+  color: floralwhite;
+}
+.climbing-nr2 {
+  color: rgb(126, 26, 64);
+}
+.climbing-nr3 {
+  color: rgb(39, 95, 86);
+}
+
+/* media querry */
+@media screen and (max-width: 1436px) {
+  .slide {
+    width: 95%;
+  }
+  .hero-desc h2 {
+    font-size: 3rem;
+  }
+  .hero-desc p {
+    padding: 2rem 0;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 60%;
+  }
+  .cursor {
+    display: none;
+  }
+  .nav-header {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .slide {
+    min-height: 85vh;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 5rem 0;
+  }
+  .hero-img {
+    flex-basis: 0;
+  }
+  .hero-img img {
+    width: 90%;
+    height: 90%;
+    margin: 5rem 0rem;
+  }
+  .explore {
+    align-self: center;
+  }
+  .hero-desc {
+    padding-left: 0;
+    padding: 0 1rem;
+    flex-basis: 0;
+    align-items: center;
+  }
+  .nav-bar {
+    text-align: center;
+    flex-basis: 0;
+    flex-direction: column;
+    padding: 10rem 0;
+    justify-content: space-around;
+  }
+  .nav-links {
+    font-size: 1.8rem;
+  }
+  .contact {
+    padding: 0rem 1rem;
+    flex-basis: 0;
+  }
+  .contact h2 {
+    font-size: 2.5rem;
+  }
+  .contact p {
+    padding: 1rem 1.5rem;
+  }
+  .detail-slide,
+  .climbing-slide {
+    width: 100%;
+    margin: 0;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+  .hike-slide {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .fashion-img img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+  }
+  .climbing-img img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+  }
+  .hike-img img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+  }
+  .fashion-text {
+    flex: 0;
+    flex-basis: 0;
+    margin: 4rem 0;
+    width: 60%;
+  }
+  .hike-text {
+    flex: 0;
+    flex-basis: 0;
+    margin: 4rem 0;
+    width: 60%;
+    text-align: center;
+  }
+  .climbing-text {
+    flex: 0;
+    flex-basis: 0;
+    margin: 4rem 0;
+    width: 60%;
+  }
+  .fashion-text p {
+    padding: 0rem 2rem;
+    line-height: 2rem;
+    margin-bottom: 0rem;
+  }
+  .fashion-text h2 {
+    padding: 2rem 0rem;
+    font-size: 2.5rem;
+  }
+  .climbing-text p {
+    padding: 0rem 5rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+  .climbing-text h2 {
+    padding: 2rem 0rem;
+  }
+  .hike-text h2 {
+    padding: 2rem 0rem;
+  }
+  .hike-text p {
+    padding: 0rem 5rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+  .fashion-img {
+    width: 50%;
+    margin: 0 auto;
+    flex: 0;
+    flex-basis: 0;
+  }
+  .hike-img {
+    width: 50%;
+    margin: 0 auto;
+    flex: 0;
+    flex-basis: 0;
+  }
+  .climbing-img {
+    width: 50%;
+    margin: 0 auto;
+    flex: 0;
+    flex-basis: 0;
+  }
+  .climbing-nr {
+    display: none;
+    opacity: 40%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+  .fashion-nr {
+    opacity: 40%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+  .hike-nr {
+    bottom: 0;
+    left: 50%;
+    opacity: 40%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .slide {
+    min-height: 80vh;
+    padding: 10rem 0;
+  }
+}
+@media screen and (max-width: 780px) {
+  .slide {
+    min-height: 95vh;
+    padding: 5rem 0;
+  }
+  .fashion-img {
+    width: 60%;
+  }
+  .climbing-img {
+    width: 60%;
+  }
+  .hike-img {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 559px) {
+  .fashion-img {
+    width: 70%;
+  }
+  .climbing-img {
+    width: 70%;
+  }
+  .hike-img {
+    width: 70%;
+  }
+  .climbing-text h2 {
+    font-size: 3rem;
+  }
+  .hike-text h2 {
+    font-size: 3rem;
+  }
+  .slide {
+    width: 100%;
+  }
+  .hero-desc h2 {
+    font-size: 3rem;
+  }
+  .fashion-text {
+    width: 100%;
+  }
+  .climbing-text {
+    width: 100%;
+  }
+  .hike-text {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .slide {
+    min-height: 75vh;
+    padding: 10rem 0;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .slide {
+    min-height: 95vh;
+    padding: 5rem 0;
+  }
+  .climbing-nr,
+  .fashion-nr,
+  .hike-nr {
+    font-size: 10rem;
+  }
+}
+@media screen and (max-width: 330px) {
+  .slide {
+    padding: 1rem 0;
+    min-height: 100vh;
+  }
+  .fashion-img {
+    width: 50%;
+  }
+  .climbing-img {
+    width: 50%;
+  }
+  .hike-img {
+    width: 50%;
+  }
+  .nav-links {
+    margin-top: 2rem;
+  }
+  .nav-links a {
+    margin: 2rem 0;
+  }
+}

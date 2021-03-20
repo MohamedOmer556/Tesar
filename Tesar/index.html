@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Tesar</title>
+  </head>
+  <body data-barba="wrapper">
+    <header class="nav-header">
+      <h2><a href="/index.html" id="logo">Tesar</a></h2>
+      <div class="burger">
+        <div class="line1 line"></div>
+        <div class="line2 line"></div>
+      </div>
+    </header>
+    <main data-barba="container" data-barba-namespace="home">
+      <section class="mountain slide">
+        <div class="hero-img">
+          <img id="mountain-img" src="/imgs/forest.jpg" alt="mountain" />
+          <div class="reveal-img"></div>
+        </div>
+        <div class="hero-desc">
+          <div class="title">
+            <h2>
+              Go where you feal <span class="mountain-span">most alive.</span>
+            </h2>
+            <div class="title-swipe t-swipe1"></div>
+          </div>
+          <p>
+            Over every mountain there is a pass, how glorious a greeting the sun
+            gives the mountains!
+          </p>
+          <a href="./climbing/index.html" class="explore mountain-exp"
+            >Explore</a
+          >
+          <div class="reveal-text"></div>
+        </div>
+      </section>
+
+      <section class="hike slide">
+        <div class="hero-img">
+          <img id="hike-img" src="/imgs/hike.jpg" alt="hike" />
+          <div class="reveal-img"></div>
+        </div>
+        <div class="hero-desc">
+          <div class="title">
+            <h2>
+              Hiking is<span class="hike-span"> like life</span>
+              hike more.
+            </h2>
+            <div class="title-swipe t-swipe2"></div>
+          </div>
+          <p>
+            It feels good to be lost in the right direction,Don't follow where
+            the path may lead
+          </p>
+          <a href="./hike/index.html" class="explore hike-exp">Explore</a>
+          <div class="reveal-text"></div>
+        </div>
+      </section>
+
+      <section class="fashion slide">
+        <div class="hero-img">
+          <img
+            id="fashion-img"
+            src="/imgs/pexels-pixabay-247204.jpg"
+            alt="fasion"
+          />
+          <div class="reveal-img"></div>
+        </div>
+        <div class="hero-desc">
+          <div class="title">
+            <h2>
+              <span class="fashion-span">Fashion changes </span> but style
+              endures.
+            </h2>
+            <div class="title-swipe t-swipe3"></div>
+          </div>
+          <p>
+            Clothes mean nothing until someone lives in them, style is a way to
+            say who you are without having to speak.
+          </p>
+          <a href="./fashion/index.html" class="explore fashion-exp">Explore</a>
+          <div class="reveal-text"></div>
+        </div>
+      </section>
+    </main>
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </ul>
+      <div class="contact">
+        <h2>Stay In Touch.</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
+          dignissimos numquam eveniet maiores nemo. Magnam excepturi ad iusto
+          voluptatum ratione?
+        </p>
+      </div>
+    </nav>
+    <!--for cursor animation-->
+    <div class="cursor">
+      <div class="cursor-text"></div>
+    </div>
+    <!--3 colored page transition when we click explore-->
+    <div class="swipe swipe1"></div>
+    <div class="swipe swipe2"></div>
+    <div class="swipe swipe3"></div>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+      integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
+      integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"
+      integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
